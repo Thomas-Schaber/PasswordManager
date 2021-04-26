@@ -1,14 +1,24 @@
 <html>
     <head></head>
     <body>
-        <h1 name="test">Password Manager</h1>
-        <form action=" " name="userAndPass">
+        <h1 id="test">Password Manager</h1>
+        <form action="managePass.js" name="userAndPass">
+            
+            <h3>Service</h3>
+            <textarea name="service" cols="50px" rows="1px"></textarea>
             <h3>Username</h3>
-            <textarea name="user" cols="50px" rows="1px">Enter username</textarea>
+            <textarea name="user" cols="50px" rows="1px"></textarea>
             <h3>Password</h3>
-            <textarea name="pass" cols="50px" rows="1px">Enter password</textarea>
-            <input type="button" name="addUserAndPass" onclick="printUser()">
+            <textarea name="pass" cols="50px" rows="1px"></textarea>
+            <br>
+            <br>
+            <input type="button" name="addUserAndPass" onclick="addToList()" value="Add to Manager">
         </form>
+        <div>
+            <h1>Current Passwords:</h1>
+            <p id="list"></p>
+
+        </div>
 
         <script type="text/javascript" src="managePass.js" ></script>
     </body>
