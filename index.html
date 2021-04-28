@@ -1,5 +1,8 @@
 <html>
-    <head></head>
+    <head>
+        <title>Password Manager</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
     <body>
         <h1 id="test">Password Manager</h1>
         <form action="managePass.js" name="userAndPass">
@@ -12,8 +15,9 @@
             <textarea name="pass" cols="50px" rows="1px"></textarea>
             <br>
             <br>
-            <input type="button" name="addUserAndPass" onclick="addToList()" value="Add to Manager">
-            <input type="button" name="removeUserAndPass" onclick="remove()" value="Remove Service Creditals">
+            <input type="button" name="addButton" onclick="addToList()" value="Add to Manager">
+            <input type="button" name="removeButton" onclick="remove()" value="Remove Service Creditals">
+            <input type="button" name="sortButton" onclick="sortList()" value="Sort By Service Name">
         </form>
         <div>
             <h1>Current Passwords:</h1>

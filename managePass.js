@@ -5,6 +5,8 @@ var pass = form1.pass;
 var store = [];
 var listTag = document.getElementById("list");
 //service:service.value, username:user.value,password:pass.value;
+
+
 function Credientials(service, username, password) {
     this.serVal= service;
     this.userVal = username;
@@ -45,9 +47,7 @@ function addToList(){
        service.value = "";
        user.value = "";
        pass.value = "";
-       printList();
-
-       
+       printList();       
    }
     else {
         alert("No box can be blank");
@@ -56,6 +56,11 @@ function addToList(){
 }
 
 function remove() {
+    if(service.value == ""){
+        alert("please enter name of service credentials to remove in Service box");
+    } else if(store.length == 0) {
+        alert("Manager is empty");
+    }
     for(var x = 0; x < store.length; x++){
         
         if(store[x].getService() == service.value){
@@ -63,13 +68,17 @@ function remove() {
             if(store.length >= 1 && x == 0){
                 store.splice(0, 1);
                 printList();
+                service.value = "";
+                user.value = "";
+                pass.value = "";
+
             } else if(store.length >=1 && x > 0){
                 store.splice(x, x+1);
                 printList();
-            } else if(x == store.length){
-                store.splice(-1, x - 1);
-                printList();
-            }
+                service.value = "";
+                user.value = "";
+                pass.value = "";
+            } 
             //store = store.slice(x);
             //service.value = "";
            // user.value = "";
@@ -81,5 +90,16 @@ function remove() {
             
         }
    }
+}
+
+function sortList(){
+    store.sort(function(a, b){
+        var x =  a.serVal.toLowerCase();
+        var y =  b.serVal.toLowerCase();
+        if(x < y){return -1;}
+        if(x > y){return 1;}
+        return 0;
+    });
+    printList();
 }
 
