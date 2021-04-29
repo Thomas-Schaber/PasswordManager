@@ -1,0 +1,54 @@
+.formBox {
+    word-wrap: normal;
+}
+
+.labels *{
+    
+    padding: auto;
+    margin: auto;
+    vertical-align: middle;
+}
+
+.labels label {
+    font-weight: 800;
+    font-size: 20px;
+    margin-left: 1%;
+}
+
+.labels label.sLabel {
+    padding-right: 22px;
+}
+
+.labels label.pLabel {
+    padding-right: 5px;
+    
+}
+
+
+.passList {
+    margin-top: 50px;
+    margin-left: 6%;
+    width: 300px;
+    height: auto;
+    border-width: 5px;
+    border-style: ridge;
+}
+
+.passList h1 {
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: auto;
+    text-align: center;
+}
+
+.passList p {
+    padding-left: 20px;
+    font-size: 1rem;
+}
+
+.button {
+    margin-left: 1%;
+    
+}

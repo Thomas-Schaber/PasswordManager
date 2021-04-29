@@ -57,37 +57,44 @@ function addToList(){
 
 function remove() {
     if(service.value == ""){
-        alert("please enter name of service credentials to remove in Service box");
+        alert("Enter name of the service to remove in Service box");
     } else if(store.length == 0) {
         alert("Manager is empty");
-    }
-    for(var x = 0; x < store.length; x++){
-        
-        if(store[x].getService() == service.value){
-            //alert("Removed " + service.value);
-            if(store.length >= 1 && x == 0){
-                store.splice(0, 1);
-                printList();
-                service.value = "";
-                user.value = "";
-                pass.value = "";
+    } else {
+        var found = false;
+        for(var x = 0; x < store.length; x++){
+            if(store[x].getService() == service.value){
+                found = true;
+                //alert("Removed " + service.value);
+                if(store.length >= 1 && x == 0){
+                    store.splice(0, 1);
+                    printList();
+                    service.value = "";
+                    user.value = "";
+                    pass.value = "";
 
-            } else if(store.length >=1 && x > 0){
-                store.splice(x, x+1);
-                printList();
-                service.value = "";
-                user.value = "";
-                pass.value = "";
-            } 
-            //store = store.slice(x);
-            //service.value = "";
-           // user.value = "";
-            //pass.value = "";
-            else {
-                //alert(store.length);
-                alert("error");
-                }
+                }  else if(store.length >=1 && x > 0){
+                    store.splice(x, x+1);
+                    printList();
+                    service.value = "";
+                    user.value = "";
+                    pass.value = "";
+                } 
+                //store = store.slice(x);
+                //service.value = "";
+            // user.value = "";
+                //pass.value = "";
+                else {
+                    //alert(store.length);
+                    alert("Error");
+                    }
             
+           } else {
+               if(!found){
+                alert(service.value + " is not in Manager!");
+               }
+                
+           }
         }
    }
 }

@@ -5,21 +5,27 @@
     </head>
     <body>
         <h1 id="test">Password Manager</h1>
-        <form action="managePass.js" name="userAndPass">
+        <form action="managePass.js" name="userAndPass" class="formBox">
             
-            <h3>Service</h3>
-            <textarea name="service" cols="50px" rows="1px"></textarea>
-            <h3>Username</h3>
-            <textarea name="user" cols="50px" rows="1px"></textarea>
-            <h3>Password</h3>
-            <textarea name="pass" cols="50px" rows="1px"></textarea>
-            <br>
-            <br>
-            <input type="button" name="addButton" onclick="addToList()" value="Add to Manager">
-            <input type="button" name="removeButton" onclick="remove()" value="Remove Service Creditals">
-            <input type="button" name="sortButton" onclick="sortList()" value="Sort By Service Name">
+            <p class="labels">
+                <label class="sLabel" for="service">Service: </label>
+                <textarea name="service" cols="50px" rows="1px"></textarea>
+                <br>
+                <br>
+                <label for="user">Username: </label>
+                <textarea name="user" cols="50px" rows="1px"></textarea>
+                <br>
+                <br>
+                <label class="pLabel" for="pass">Password: </label>
+                <textarea name="pass" cols="50px" rows="1px"></textarea>
+                <br>
+                <br>
+                <input type="button" class="button" name="addButton" onclick="addToList()" value="Add to Manager">
+                <input type="button"  class="button" name="removeButton" onclick="remove()" value="Remove Service Creditals">
+                <input type="button"  class="button" name="sortButton" onclick="sortList()" value="Sort By Service Name">
+            </p>
         </form>
-        <div>
+        <div class="passList">
             <h1>Current Passwords:</h1>
             <p id="list"></p>
 
