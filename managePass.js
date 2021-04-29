@@ -7,7 +7,7 @@ var listTag = document.getElementById("list");
 //service:service.value, username:user.value,password:pass.value;
 
 
-function Credientials(service, username, password) {
+function Credentials(service, username, password) {
     this.serVal= service;
     this.userVal = username;
     this.passVal = password;
@@ -43,7 +43,7 @@ function addToList(){
     } 
     */
    if(service.value != "" && user.value != "" && pass.value !=""){
-       store.push(new Credientials(service.value, user.value, pass.value));
+       store.push(new Credentials(service.value, user.value, pass.value));
        service.value = "";
        user.value = "";
        pass.value = "";
