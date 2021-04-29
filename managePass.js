@@ -65,15 +65,23 @@ function remove() {
         for(var x = 0; x < store.length; x++){
             if(store[x].getService() == service.value){
                 found = true;
-                //alert("Removed " + service.value);
+                store.splice(x, 1);
+                printList();
+               /* //alert("Removed " + service.value);
                 if(store.length >= 1 && x == 0){
+                    alert(x + "x");
+                    alert(store[x].getService);
                     store.splice(0, 1);
                     printList();
                     service.value = "";
                     user.value = "";
                     pass.value = "";
+                    
 
                 }  else if(store.length >=1 && x > 0){
+                    alert(x + "x");
+                    alert(store[x].getService);
+                    alert("second");
                     store.splice(x, x+1);
                     printList();
                     service.value = "";
@@ -88,14 +96,15 @@ function remove() {
                     //alert(store.length);
                     alert("Error");
                     }
+                    */
             
-           } else {
-               if(!found){
-                alert(service.value + " is not in Manager!");
-               }
+           
                 
            }
-        }
+        }  //else {
+           // if(!found){
+            // alert(service.value + " is not in Manager!");
+           // }
    }
 }
 
