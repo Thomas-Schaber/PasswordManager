@@ -67,6 +67,9 @@ function remove() {
                 found = true;
                 store.splice(x, 1);
                 printList();
+                service.value = "";
+                user.value = "";
+                pass.value = "";
                /* //alert("Removed " + service.value);
                 if(store.length >= 1 && x == 0){
                     alert(x + "x");
